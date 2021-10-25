@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Debugging
+﻿namespace Debugging
 {
     class Program
     {
