@@ -3,10 +3,34 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace />
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/Dalk-GitHub/Logging.Net</PackageProjectUrl>
+    <Company></Company>
+    <Authors>DalkYouTube</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Description>A logging library for C#</Description>
+    <Copyright />
+    <RepositoryUrl>https://github.com/Dalk-GitHub/Logging.Net</RepositoryUrl>
+    <PackageTags>Logger</PackageTags>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>C:\Users\Dalk YouTube\src\NetLogging\Logging.Net\Logging.Net\Logging.Net\Logging.Net.xml</DocumentationFile>
+    <DefineConstants />
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
