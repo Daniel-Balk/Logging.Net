@@ -6,6 +6,11 @@ A logger library for C#
 
 ## Documentation
 
+### import the logger class
+```csharp
+using Logging.Net;
+```
+
 ### write logs to a file
 ```csharp
 // the logs should be written to a file
