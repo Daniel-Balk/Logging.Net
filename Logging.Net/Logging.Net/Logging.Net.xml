@@ -4,577 +4,6 @@
         <name>Logging.Net</name>
     </assembly>
     <members>
-        <member name="T:Logger">
-            <summary>
-            A public static class to access the logger
-            </summary>
-        </member>
-        <member name="P:Logger.UsedLogger">
-            <summary>
-            The Logger the class uses
-            </summary>
-        </member>
-        <member name="M:Logger.Debug(System.UInt32)">
-            <summary>
-            logs an uint as debug
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.String,System.Object[])">
-            <summary>
-            logs a formated string as debug
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg">replacing parameters</param>
-        </member>
-        <member name="M:Logger.Debug(System.Boolean)">
-            <summary>
-            logs a bool as debug
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.Char[])">
-            <summary>
-            logs a char[] as debug
-            </summary>
-            <param name="buffer">value to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.Char[],System.Int32,System.Int32)">
-            <summary>
-            logs a part of a char[] as debug
-            </summary>
-            <param name="buffer">value to log</param>
-            <param name="index">start at</param>
-            <param name="count">count of chars to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.Decimal)">
-            <summary>
-            logs a decimal as debug
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.Double)">
-            <summary>
-            logs a double as debug
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.UInt64)">
-            <summary>
-            logs an ulong as debug
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.Int32)">
-            <summary>
-            logs an int as debug
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.Object)">
-            <summary>
-            logs an object as debug
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.Single)">
-            <summary>
-            logs a float as debug
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.String)">
-            <summary>
-            logs a string as debug
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.String,System.Object)">
-            <summary>
-            logs a formated string as debug
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">replacing string</param>
-        </member>
-        <member name="M:Logger.Debug(System.String,System.Object,System.Object)">
-            <summary>
-            logs a formated string as debug
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">first replacing string</param>
-            <param name="arg1">second replacing string</param>
-        </member>
-        <member name="M:Logger.Debug(System.String,System.Object,System.Object,System.Object)">
-            <summary>
-            logs a formated string as debug
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">first replacing string</param>
-            <param name="arg1">second replacing string</param>
-            <param name="arg2">third repacing string</param>
-        </member>
-        <member name="M:Logger.Debug(System.Int64)">
-            <summary>
-            logs a long as debug
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Debug(System.Char)">
-            <summary>
-            logs a char as debug
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.UInt32)">
-            <summary>
-            logs an uint as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.String,System.Object[])">
-            <summary>
-            logs a formated string
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg">replacing strings</param>
-        </member>
-        <member name="M:Logger.Info(System.Boolean)">
-            <summary>
-            logs a bool as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.Char[])">
-            <summary>
-            logs a char[] as info
-            </summary>
-            <param name="buffer">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.Char[],System.Int32,System.Int32)">
-            <summary>
-            logs a part of a char[] as info
-            </summary>
-            <param name="buffer">chars to log</param>
-            <param name="index">start in buffer</param>
-            <param name="count">count of chars to log</param>
-        </member>
-        <member name="M:Logger.Info(System.Decimal)">
-            <summary>
-            logs a decimal as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.Double)">
-            <summary>
-            logs a double as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.UInt64)">
-            <summary>
-            logs an ulong as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.Int32)">
-            <summary>
-            logs an int as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.Object)">
-            <summary>
-            logs an object as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.Single)">
-            <summary>
-            logs a float as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.String)">
-            <summary>
-            logs a string as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.String,System.Object)">
-            <summary>
-            logs a formated string
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">replacing string</param>
-        </member>
-        <member name="M:Logger.Info(System.String,System.Object,System.Object)">
-            <summary>
-            logs a formated string
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">first replacing string</param>
-            <param name="arg1">second replacing string</param>
-        </member>
-        <member name="M:Logger.Info(System.String,System.Object,System.Object,System.Object)">
-            <summary>
-            logs a formated string
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">first replacing string</param>
-            <param name="arg1">second replacing string</param>
-            <param name="arg2">thirs replacing string</param>
-        </member>
-        <member name="M:Logger.Info(System.Int64)">
-            <summary>
-            logs a long as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Info(System.Char)">
-            <summary>
-            logs a char as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.UInt32)">
-            <summary>
-            logs an uint as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.String,System.Object[])">
-            <summary>
-            logs a formated string
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg">replacing strings</param>
-        </member>
-        <member name="M:Logger.Log(System.Boolean)">
-            <summary>
-            logs a bool as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.Char[])">
-            <summary>
-            logs a char[] as info
-            </summary>
-            <param name="buffer">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.Char[],System.Int32,System.Int32)">
-            <summary>
-            logs a part of a char[] as info
-            </summary>
-            <param name="buffer">chars to log</param>
-            <param name="index">start in buffer</param>
-            <param name="count">count of chars to log</param>
-        </member>
-        <member name="M:Logger.Log(System.Decimal)">
-            <summary>
-            logs a decimal as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.Double)">
-            <summary>
-            logs a double as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.UInt64)">
-            <summary>
-            logs an ulong as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.Int32)">
-            <summary>
-            logs an int as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.Object)">
-            <summary>
-            logs an object as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.Single)">
-            <summary>
-            logs a float as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.String)">
-            <summary>
-            logs a string as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.String,System.Object)">
-            <summary>
-            logs a formated string
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">replacing string</param>
-        </member>
-        <member name="M:Logger.Log(System.String,System.Object,System.Object)">
-            <summary>
-            logs a formated string
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">first replacing string</param>
-            <param name="arg1">second replacing string</param>
-        </member>
-        <member name="M:Logger.Log(System.String,System.Object,System.Object,System.Object)">
-            <summary>
-            logs a formated string
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">first replacing string</param>
-            <param name="arg1">second replacing string</param>
-            <param name="arg2">thirs replacing string</param>
-        </member>
-        <member name="M:Logger.Log(System.Int64)">
-            <summary>
-            logs a long as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Log(System.Char)">
-            <summary>
-            logs a char as info
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.UInt32)">
-            <summary>
-            logs an uint as warn
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.String,System.Object[])">
-            <summary>
-            logs a formated string as warn
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg">replacing parameters</param>
-        </member>
-        <member name="M:Logger.Warn(System.Boolean)">
-            <summary>
-            logs a bool as warn
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.Char[])">
-            <summary>
-            logs a char[] as warn
-            </summary>
-            <param name="buffer">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.Char[],System.Int32,System.Int32)">
-            <summary>
-            logs a part of a char[] as warn
-            </summary>
-            <param name="buffer">value to log</param>
-            <param name="index">start at</param>
-            <param name="count">count of chars to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.Decimal)">
-            <summary>
-            logs a decimal as warn
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.Double)">
-            <summary>
-            logs a double as warn
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.UInt64)">
-            <summary>
-            logs an ulong as warn
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.Int32)">
-            <summary>
-            logs an int as warn
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.Object)">
-            <summary>
-            logs an object as warn
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.Single)">
-            <summary>
-            logs a float as warn
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.String)">
-            <summary>
-            logs a string as warn
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.String,System.Object)">
-            <summary>
-            logs a formated string as warn
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">replacing string</param>
-        </member>
-        <member name="M:Logger.Warn(System.String,System.Object,System.Object)">
-            <summary>
-            logs a formated string as warn
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">first replacing string</param>
-            <param name="arg1">second replacing string</param>
-        </member>
-        <member name="M:Logger.Warn(System.String,System.Object,System.Object,System.Object)">
-            <summary>
-            logs a formated string as warn
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">first replacing string</param>
-            <param name="arg1">second replacing string</param>
-            <param name="arg2">third repacing string</param>
-        </member>
-        <member name="M:Logger.Warn(System.Int64)">
-            <summary>
-            logs a long as warn
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Warn(System.Char)">
-            <summary>
-            logs a char as warn
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.UInt32)">
-            <summary>
-            logs an uint as error
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.String,System.Object[])">
-            <summary>
-            logs a formated string as error
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg">replacing parameters</param>
-        </member>
-        <member name="M:Logger.Error(System.Boolean)">
-            <summary>
-            logs a bool as error
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.Char[])">
-            <summary>
-            logs a char[] as error
-            </summary>
-            <param name="buffer">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.Char[],System.Int32,System.Int32)">
-            <summary>
-            logs a part of a char[] as error
-            </summary>
-            <param name="buffer">value to log</param>
-            <param name="index">start at</param>
-            <param name="count">count of chars to log</param>
-        </member>
-        <member name="M:Logger.Error(System.Decimal)">
-            <summary>
-            logs a decimal as error
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.Double)">
-            <summary>
-            logs a double as error
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.UInt64)">
-            <summary>
-            logs an ulong as error
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.Int32)">
-            <summary>
-            logs an int as error
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.Object)">
-            <summary>
-            logs an object as error
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.Single)">
-            <summary>
-            logs a float as error
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.String)">
-            <summary>
-            logs a string as error
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.String,System.Object)">
-            <summary>
-            logs a formated string as error
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">replacing string</param>
-        </member>
-        <member name="M:Logger.Error(System.String,System.Object,System.Object)">
-            <summary>
-            logs a formated string as error
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">first replacing string</param>
-            <param name="arg1">second replacing string</param>
-        </member>
-        <member name="M:Logger.Error(System.String,System.Object,System.Object,System.Object)">
-            <summary>
-            logs a formated string as error
-            </summary>
-            <param name="format">base string</param>
-            <param name="arg0">first replacing string</param>
-            <param name="arg1">second replacing string</param>
-            <param name="arg2">third repacing string</param>
-        </member>
-        <member name="M:Logger.Error(System.Int64)">
-            <summary>
-            logs a long as error
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.Error(System.Char)">
-            <summary>
-            logs a char as error
-            </summary>
-            <param name="value">value to log</param>
-        </member>
-        <member name="M:Logger.LogToFile(System.String)">
-            <summary>
-            tells the logger to save the logs to a specified file
-            </summary>
-            <param name="fileName">file, where the logs get saved</param>
-        </member>
         <member name="T:Logging.Net.ILogger">
             <summary>
             interface for logger classes
@@ -675,6 +104,577 @@
             </summary>
             <param name="s">log message</param>
             <param name="color">color of the message</param>
+        </member>
+        <member name="T:Logging.Net.Logger">
+            <summary>
+            A public static class to access the logger
+            </summary>
+        </member>
+        <member name="P:Logging.Net.Logger.UsedLogger">
+            <summary>
+            The Logger the class uses
+            </summary>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.UInt32)">
+            <summary>
+            logs an uint as debug
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.String,System.Object[])">
+            <summary>
+            logs a formated string as debug
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg">replacing parameters</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.Boolean)">
+            <summary>
+            logs a bool as debug
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.Char[])">
+            <summary>
+            logs a char[] as debug
+            </summary>
+            <param name="buffer">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            logs a part of a char[] as debug
+            </summary>
+            <param name="buffer">value to log</param>
+            <param name="index">start at</param>
+            <param name="count">count of chars to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.Decimal)">
+            <summary>
+            logs a decimal as debug
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.Double)">
+            <summary>
+            logs a double as debug
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.UInt64)">
+            <summary>
+            logs an ulong as debug
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.Int32)">
+            <summary>
+            logs an int as debug
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.Object)">
+            <summary>
+            logs an object as debug
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.Single)">
+            <summary>
+            logs a float as debug
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.String)">
+            <summary>
+            logs a string as debug
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.String,System.Object)">
+            <summary>
+            logs a formated string as debug
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.String,System.Object,System.Object)">
+            <summary>
+            logs a formated string as debug
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">first replacing string</param>
+            <param name="arg1">second replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            logs a formated string as debug
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">first replacing string</param>
+            <param name="arg1">second replacing string</param>
+            <param name="arg2">third repacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.Int64)">
+            <summary>
+            logs a long as debug
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Debug(System.Char)">
+            <summary>
+            logs a char as debug
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.UInt32)">
+            <summary>
+            logs an uint as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.String,System.Object[])">
+            <summary>
+            logs a formated string
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg">replacing strings</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.Boolean)">
+            <summary>
+            logs a bool as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.Char[])">
+            <summary>
+            logs a char[] as info
+            </summary>
+            <param name="buffer">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            logs a part of a char[] as info
+            </summary>
+            <param name="buffer">chars to log</param>
+            <param name="index">start in buffer</param>
+            <param name="count">count of chars to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.Decimal)">
+            <summary>
+            logs a decimal as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.Double)">
+            <summary>
+            logs a double as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.UInt64)">
+            <summary>
+            logs an ulong as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.Int32)">
+            <summary>
+            logs an int as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.Object)">
+            <summary>
+            logs an object as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.Single)">
+            <summary>
+            logs a float as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.String)">
+            <summary>
+            logs a string as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.String,System.Object)">
+            <summary>
+            logs a formated string
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.String,System.Object,System.Object)">
+            <summary>
+            logs a formated string
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">first replacing string</param>
+            <param name="arg1">second replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            logs a formated string
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">first replacing string</param>
+            <param name="arg1">second replacing string</param>
+            <param name="arg2">thirs replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.Int64)">
+            <summary>
+            logs a long as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Info(System.Char)">
+            <summary>
+            logs a char as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.UInt32)">
+            <summary>
+            logs an uint as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.String,System.Object[])">
+            <summary>
+            logs a formated string
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg">replacing strings</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.Boolean)">
+            <summary>
+            logs a bool as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.Char[])">
+            <summary>
+            logs a char[] as info
+            </summary>
+            <param name="buffer">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            logs a part of a char[] as info
+            </summary>
+            <param name="buffer">chars to log</param>
+            <param name="index">start in buffer</param>
+            <param name="count">count of chars to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.Decimal)">
+            <summary>
+            logs a decimal as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.Double)">
+            <summary>
+            logs a double as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.UInt64)">
+            <summary>
+            logs an ulong as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.Int32)">
+            <summary>
+            logs an int as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.Object)">
+            <summary>
+            logs an object as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.Single)">
+            <summary>
+            logs a float as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.String)">
+            <summary>
+            logs a string as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.String,System.Object)">
+            <summary>
+            logs a formated string
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.String,System.Object,System.Object)">
+            <summary>
+            logs a formated string
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">first replacing string</param>
+            <param name="arg1">second replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            logs a formated string
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">first replacing string</param>
+            <param name="arg1">second replacing string</param>
+            <param name="arg2">thirs replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.Int64)">
+            <summary>
+            logs a long as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Log(System.Char)">
+            <summary>
+            logs a char as info
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.UInt32)">
+            <summary>
+            logs an uint as warn
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.String,System.Object[])">
+            <summary>
+            logs a formated string as warn
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg">replacing parameters</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.Boolean)">
+            <summary>
+            logs a bool as warn
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.Char[])">
+            <summary>
+            logs a char[] as warn
+            </summary>
+            <param name="buffer">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            logs a part of a char[] as warn
+            </summary>
+            <param name="buffer">value to log</param>
+            <param name="index">start at</param>
+            <param name="count">count of chars to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.Decimal)">
+            <summary>
+            logs a decimal as warn
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.Double)">
+            <summary>
+            logs a double as warn
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.UInt64)">
+            <summary>
+            logs an ulong as warn
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.Int32)">
+            <summary>
+            logs an int as warn
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.Object)">
+            <summary>
+            logs an object as warn
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.Single)">
+            <summary>
+            logs a float as warn
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.String)">
+            <summary>
+            logs a string as warn
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.String,System.Object)">
+            <summary>
+            logs a formated string as warn
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.String,System.Object,System.Object)">
+            <summary>
+            logs a formated string as warn
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">first replacing string</param>
+            <param name="arg1">second replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            logs a formated string as warn
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">first replacing string</param>
+            <param name="arg1">second replacing string</param>
+            <param name="arg2">third repacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.Int64)">
+            <summary>
+            logs a long as warn
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Warn(System.Char)">
+            <summary>
+            logs a char as warn
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.UInt32)">
+            <summary>
+            logs an uint as error
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.String,System.Object[])">
+            <summary>
+            logs a formated string as error
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg">replacing parameters</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.Boolean)">
+            <summary>
+            logs a bool as error
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.Char[])">
+            <summary>
+            logs a char[] as error
+            </summary>
+            <param name="buffer">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            logs a part of a char[] as error
+            </summary>
+            <param name="buffer">value to log</param>
+            <param name="index">start at</param>
+            <param name="count">count of chars to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.Decimal)">
+            <summary>
+            logs a decimal as error
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.Double)">
+            <summary>
+            logs a double as error
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.UInt64)">
+            <summary>
+            logs an ulong as error
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.Int32)">
+            <summary>
+            logs an int as error
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.Object)">
+            <summary>
+            logs an object as error
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.Single)">
+            <summary>
+            logs a float as error
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.String)">
+            <summary>
+            logs a string as error
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.String,System.Object)">
+            <summary>
+            logs a formated string as error
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.String,System.Object,System.Object)">
+            <summary>
+            logs a formated string as error
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">first replacing string</param>
+            <param name="arg1">second replacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            logs a formated string as error
+            </summary>
+            <param name="format">base string</param>
+            <param name="arg0">first replacing string</param>
+            <param name="arg1">second replacing string</param>
+            <param name="arg2">third repacing string</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.Int64)">
+            <summary>
+            logs a long as error
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.Error(System.Char)">
+            <summary>
+            logs a char as error
+            </summary>
+            <param name="value">value to log</param>
+        </member>
+        <member name="M:Logging.Net.Logger.LogToFile(System.String)">
+            <summary>
+            tells the logger to save the logs to a specified file
+            </summary>
+            <param name="fileName">file, where the logs get saved</param>
         </member>
         <member name="T:Logging.Net.Loggers.LogFileLogger">
             <summary>
