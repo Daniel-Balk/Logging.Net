@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Logging.Net" Version="1.0.0" />
+    <ProjectReference Include="..\Logging.Net\Logging.Net.csproj" />
   </ItemGroup>
 
 </Project>

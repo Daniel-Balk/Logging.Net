@@ -1,4 +1,6 @@
-﻿namespace Debugging
+﻿using Logging.Net;
+
+namespace Debugging
 {
     class Program
     {
