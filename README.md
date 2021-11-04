@@ -1,6 +1,4 @@
 # Logging.Net
-[![Logging.Net on nuget.org](https://img.shields.io/badge/nuget-v1.0.0-blue.svg)](https://www.nuget.org/packages/Logging.Net/)
-[![License: GNU GPL](https://img.shields.io/badge/License-GNU_GPL_v3-green.svg)](https://github.com/Dalk-Github/Logging.Net/blob/master/LICENSE)
 
 A logger library for C#
 
