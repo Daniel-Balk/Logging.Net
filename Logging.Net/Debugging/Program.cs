@@ -4,10 +4,10 @@ namespace Debugging
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             // the logs should be written to a file
-            Logger.LogToFile("info.log");
+            Logger.LogToHtmlFile("log.html");
 
             // log a message as debug
             Logger.Debug("A debug log message...");

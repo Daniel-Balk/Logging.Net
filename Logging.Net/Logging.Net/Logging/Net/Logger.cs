@@ -848,5 +848,14 @@ namespace Logging.Net
         {
             UsedLogger.SetAddition(new LogFileLogger(fileName));
         }
+        
+        /// <summary>
+        /// tells the logger to save the logs to a specified html file
+        /// </summary>
+        /// <param name="fileName">file, where the logs get saved</param>
+        public static void LogToHtmlFile(string fileName)
+        {
+            UsedLogger.SetAddition(new HTMLFileLogger(fileName));
+        }
     }
 }

@@ -676,6 +676,35 @@
             </summary>
             <param name="fileName">file, where the logs get saved</param>
         </member>
+        <member name="M:Logging.Net.Logger.LogToHtmlFile(System.String)">
+            <summary>
+            tells the logger to save the logs to a specified html file
+            </summary>
+            <param name="fileName">file, where the logs get saved</param>
+        </member>
+        <member name="T:Logging.Net.Loggers.HTMLFileLogger">
+            <summary>
+            a logger addition which writes the logs to a html file
+            </summary>
+        </member>
+        <member name="P:Logging.Net.Loggers.HTMLFileLogger.FileName">
+            <summary>
+            name of the file the class uses
+            </summary>
+        </member>
+        <member name="M:Logging.Net.Loggers.HTMLFileLogger.#ctor(System.String)">
+            <summary>
+            constructor to set the filename
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Logging.Net.Loggers.HTMLFileLogger.ProcessMessage(System.String,System.ConsoleColor)">
+            <summary>
+            writes the message to a html file
+            </summary>
+            <param name="s">message</param>
+            <param name="color">color of the message</param>
+        </member>
         <member name="T:Logging.Net.Loggers.LogFileLogger">
             <summary>
             a logger addition which writes the logs to a file
