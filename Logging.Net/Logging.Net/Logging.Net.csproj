@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>net5.0;net6.0;netcoreapp3.1;net45;net451;net452;net46;net461;net462;net47;net471;net472;net48;net40</TargetFrameworks>
     <RootNamespace />
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/Dalk-GitHub/Logging.Net</PackageProjectUrl>
-    <Company></Company>
+    <Company>Dalk</Company>
     <Authors>DalkYouTube</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -17,7 +17,8 @@
     <PackageIconUrl />
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

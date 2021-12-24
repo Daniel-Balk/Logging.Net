@@ -16,17 +16,18 @@ namespace Logging.Net.Loggers.SB
         }),
         new PrefixAction(() =>
         {
-            static string FormatInteger(int i)
-            {
-                if (i.ToString().Length > 1)
-                    return i.ToString();
-                return "0" + i.ToString();
-            }
             return "[" + FormatInteger(DateTime.Now.Hour) + ":" + FormatInteger(DateTime.Now.Minute)
               + ":" + FormatInteger(DateTime.Now.Second) + "]";
         }))
         {
 
+        }
+
+        private static string FormatInteger(int i)
+        {
+            if (i.ToString().Length > 1)
+                return i.ToString();
+            return "0" + i.ToString();
         }
     }
 }

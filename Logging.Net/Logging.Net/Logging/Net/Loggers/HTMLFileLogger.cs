@@ -32,7 +32,7 @@ namespace Logging.Net.Loggers
         /// <param name="color">color of the message</param>
         public void ProcessMessage(string s, ConsoleColor color)
         {
-            string html = @$"
+            string html = $@"
 <div style=""
 color: {ProcessColor(color)};
 font-family: Arial;
@@ -63,7 +63,7 @@ border: 1px solid gray;
             File.WriteAllLines(FileName, content);
         }
 
-        private string ProcessColor(ConsoleColor color)
+        private static string ProcessColor(ConsoleColor color)
         {
             switch (color)
             {
