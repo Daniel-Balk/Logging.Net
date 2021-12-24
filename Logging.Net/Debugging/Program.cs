@@ -6,11 +6,12 @@ namespace Debugging
     {
         static void Main()
         {
+            Logger.UseMBLogger();
             // the logs should be written to a file
             Logger.LogToHtmlFile("log.html");
 
             // log a message as debug
-            Logger.Debug("A debug log message...");
+            Logger.Debug("A debug log message...\nwith 3\r\nlines");
 
             // log a message as info
             Logger.Log("A log message...");

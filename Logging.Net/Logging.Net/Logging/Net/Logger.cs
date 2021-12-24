@@ -1,4 +1,5 @@
 ﻿using Logging.Net.Loggers;
+using Logging.Net.Loggers.MB;
 using Logging.Net.Loggers.SB;
 
 namespace Logging.Net
@@ -856,6 +857,22 @@ namespace Logging.Net
         public static void LogToHtmlFile(string fileName)
         {
             UsedLogger.SetAddition(new HTMLFileLogger(fileName));
+        }
+
+        /// <summary>
+        /// use a blazor like logger
+        /// </summary>
+        public static void UseMBLogger()
+        {
+            UsedLogger = new MBLogger();
+        }
+
+        /// <summary>
+        /// use a spuare bracket logger
+        /// </summary>
+        public static void UseSBLogger()
+        {
+            UsedLogger = new SBLogger();
         }
     }
 }

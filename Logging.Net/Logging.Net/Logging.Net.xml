@@ -682,6 +682,16 @@
             </summary>
             <param name="fileName">file, where the logs get saved</param>
         </member>
+        <member name="M:Logging.Net.Logger.UseMBLogger">
+            <summary>
+            use a blazor like logger
+            </summary>
+        </member>
+        <member name="M:Logging.Net.Logger.UseSBLogger">
+            <summary>
+            use a spuare bracket logger
+            </summary>
+        </member>
         <member name="T:Logging.Net.Loggers.HTMLFileLogger">
             <summary>
             a logger addition which writes the logs to a html file
@@ -727,6 +737,160 @@
             </summary>
             <param name="s">message</param>
             <param name="color">color of the message</param>
+        </member>
+        <member name="T:Logging.Net.Loggers.MB.MBDebugConfiguration">
+            <summary>
+            color configuration for debug
+            </summary>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBDebugConfiguration.#ctor">
+            <summary>
+            constructor with default values
+            </summary>
+        </member>
+        <member name="T:Logging.Net.Loggers.MB.MBErrorConfiguration">
+            <summary>
+            color configuration for error
+            </summary>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBErrorConfiguration.#ctor">
+            <summary>
+            constructor with default values
+            </summary>
+        </member>
+        <member name="T:Logging.Net.Loggers.MB.MBInfoConfiguration">
+            <summary>
+            color configuration for info
+            </summary>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBInfoConfiguration.#ctor">
+            <summary>
+            constructor with default values
+            </summary>
+        </member>
+        <member name="T:Logging.Net.Loggers.MB.MBLogger">
+            <summary>
+            a logger which loggs like blazor
+            </summary>
+        </member>
+        <member name="P:Logging.Net.Loggers.MB.MBLogger.DebugConfiguration">
+            <summary>
+            configuration for debug logs
+            </summary>
+        </member>
+        <member name="P:Logging.Net.Loggers.MB.MBLogger.InfoConfiguration">
+            <summary>
+            configuration for info logs
+            </summary>
+        </member>
+        <member name="P:Logging.Net.Loggers.MB.MBLogger.WarnConfiguration">
+            <summary>
+            configuration for warn logs
+            </summary>
+        </member>
+        <member name="P:Logging.Net.Loggers.MB.MBLogger.ErrorConfiguration">
+            <summary>
+            configuration for error logs
+            </summary>
+        </member>
+        <member name="P:Logging.Net.Loggers.MB.MBLogger.Addition">
+            <summary>
+            additional logging operation
+            </summary>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.Debug(System.String)">
+            <summary>
+            logs a string as debug
+            </summary>
+            <param name="s">string to log</param>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.Error(System.String)">
+            <summary>
+            logs a string as error
+            </summary>
+            <param name="s">string to log</param>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.GetAddition">
+            <summary>
+            gets addition
+            </summary>
+            <returns>addition</returns>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.GetDebugConfiguration">
+            <summary>
+            gets debug configuration
+            </summary>
+            <returns>debug configuration</returns>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.GetErrorConfiguration">
+            <summary>
+            gets error configuration
+            </summary>
+            <returns>error configuration</returns>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.GetInfoConfiguration">
+            <summary>
+            gets info configuration
+            </summary>
+            <returns>info configuration</returns>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.GetWarnConfiguration">
+            <summary>
+            gets warn configuration
+            </summary>
+            <returns>warn configuration</returns>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.Info(System.String)">
+            <summary>
+            logs a string as info
+            </summary>
+            <param name="s">string to log</param>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.SetAddition(Logging.Net.ILoggingAddition)">
+            <summary>
+            sets addition
+            </summary>
+            <param name="addition">new value</param>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.SetDebugConfiguration(Logging.Net.LoggingConfiguration)">
+            <summary>
+            sets new debug configuration
+            </summary>
+            <param name="configuration">new value</param>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.SetErrorConfiguration(Logging.Net.LoggingConfiguration)">
+            <summary>
+            sets new error configuration
+            </summary>
+            <param name="configuration">new value</param>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.SetInfoConfiguration(Logging.Net.LoggingConfiguration)">
+            <summary>
+            sets new info configuration
+            </summary>
+            <param name="configuration">new value</param>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.SetWarnConfiguration(Logging.Net.LoggingConfiguration)">
+            <summary>
+            sets new warn configuration
+            </summary>
+            <param name="configuration">new value</param>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBLogger.Warn(System.String)">
+            <summary>
+            logs a string as warn
+            </summary>
+            <param name="s">string to log</param>
+        </member>
+        <member name="T:Logging.Net.Loggers.MB.MBWarnConfiguration">
+            <summary>
+            color configuration for warn
+            </summary>
+        </member>
+        <member name="M:Logging.Net.Loggers.MB.MBWarnConfiguration.#ctor">
+            <summary>
+            constructor with default values
+            </summary>
         </member>
         <member name="T:Logging.Net.Loggers.NoAddition">
             <summary>
