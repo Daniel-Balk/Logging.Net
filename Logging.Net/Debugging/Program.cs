@@ -6,7 +6,12 @@ namespace Debugging
     {
         static void Main()
         {
+            // use a blazor like logger
             Logger.UseMBLogger();
+
+            // use a square bracket logger
+            Logger.UseSBLogger();
+
             // the logs should be written to a file
             Logger.LogToHtmlFile("log.html");
 
