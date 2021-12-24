@@ -15,6 +15,18 @@ using Logging.Net;
 Logger.LogToFile("info.log");
 ```
 
+### log like blazor
+```csharp
+// use a blazor like logger
+Logger.UseMBLogger();
+```
+
+### log with square brackets
+```csharp
+// use a square bracket logger
+Logger.UseSBLogger();
+```
+
 ### log a debug message
 ```csharp
 // log a message as debug
