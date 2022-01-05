@@ -124,7 +124,8 @@ namespace Logging.Net
         /// <param name="value">value to log</param>
         public static void Debug(string value)
         {
-            UsedLogger.Debug(value);
+            if (!DisableDebug)
+                UsedLogger.Debug(value);
         }
 
         /// <summary>
@@ -289,7 +290,8 @@ namespace Logging.Net
         /// <param name="value">value to log</param>
         public static void Info(string value)
         {
-            UsedLogger.Info(value);
+            if (!DisableInfo)
+                UsedLogger.Info(value);
         }
 
         /// <summary>
@@ -453,7 +455,8 @@ namespace Logging.Net
         /// <param name="value">value to log</param>
         public static void Log(string value)
         {
-            UsedLogger.Info(value);
+            if (!DisableInfo)
+                UsedLogger.Info(value);
         }
 
         /// <summary>
@@ -620,7 +623,8 @@ namespace Logging.Net
         /// <param name="value">value to log</param>
         public static void Warn(string value)
         {
-            UsedLogger.Warn(value);
+            if (!DisableWarn)
+                UsedLogger.Warn(value);
         }
 
         /// <summary>
@@ -785,7 +789,8 @@ namespace Logging.Net
         /// <param name="value">value to log</param>
         public static void Error(string value)
         {
-            UsedLogger.Error(value);
+            if (!DisableError)
+                UsedLogger.Error(value);
         }
 
         /// <summary>
@@ -840,6 +845,7 @@ namespace Logging.Net
         }
         #endregion
 
+        #region Logfiles and Modes
 
         /// <summary>
         /// tells the logger to save the logs to a specified file
@@ -849,7 +855,7 @@ namespace Logging.Net
         {
             UsedLogger.SetAddition(new LogFileLogger(fileName));
         }
-        
+
         /// <summary>
         /// tells the logger to save the logs to a specified html file
         /// </summary>
@@ -874,5 +880,31 @@ namespace Logging.Net
         {
             UsedLogger = new SBLogger();
         }
+
+        #endregion
+
+        #region Loglevels
+
+        /// <summary>
+        /// by setting this to true, the logger wont log debug anymore
+        /// </summary>
+        public static bool DisableDebug { get; set; } = false;
+
+        /// <summary>
+        /// by setting this to true, the logger wont log info anymore
+        /// </summary>
+        public static bool DisableInfo { get; set; } = false;
+
+        /// <summary>
+        /// by setting this to true, the logger wont log warn anymore
+        /// </summary>
+        public static bool DisableWarn { get; set; } = false;
+
+        /// <summary>
+        /// by setting this to true, the logger wont log error anymore
+        /// </summary>
+        public static bool DisableError { get; set; } = false;
+
+        #endregion
     }
 }

@@ -18,6 +18,9 @@ namespace Debugging
             // log a message as debug
             Logger.Debug("A debug log message...\nwith 3\r\nlines");
 
+            Logger.DisableDebug = true; 
+            Logger.Debug("You cannot see this");
+
             // log a message as info
             Logger.Log("A log message...");
 
