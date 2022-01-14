@@ -1,11 +1,24 @@
 ﻿using Logging.Net;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Debugging
 {
     class Program
     {
-        static void Main()
+        static async Task Main()
         {
+            ConsoleHelper.LineOfChar("=", System.ConsoleColor.Yellow).Write();
+            ConsoleHelper.Center("Hello World","=", System.ConsoleColor.Red).Write();
+
+            ConsoleHelper.Run(() =>
+            {
+                Logger.Info("Before sleep");
+                Logger.Debug("Sleeping 1000ms");
+                Thread.Sleep(1000);
+                Logger.Info("After sleep");
+            }, "Test", true);
+
             // use a blazor like logger
             Logger.UseMBLogger();
 
@@ -33,6 +46,7 @@ namespace Debugging
             // log a message as an error
             Logger.Error("A error message..");
 
+            await Task.Delay(2000);
         }
     }
 }
