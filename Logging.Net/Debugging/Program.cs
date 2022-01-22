@@ -1,4 +1,5 @@
 ﻿using Logging.Net;
+using Logging.Net.ConsoleUI;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -8,45 +9,53 @@ namespace Debugging
     {
         static async Task Main()
         {
-            ConsoleHelper.LineOfChar("=", System.ConsoleColor.Yellow).Write();
-            ConsoleHelper.Center("Hello World","=", System.ConsoleColor.Red).Write();
-
-            ConsoleHelper.Run(() =>
+            bool win = true;
+            if (!win)
             {
-                Logger.Info("Before sleep");
-                Logger.Debug("Sleeping 1000ms");
-                Thread.Sleep(1000);
-                Logger.Info("After sleep");
-            }, "Test", true);
+                ConsoleHelper.LineOfChar("=", System.ConsoleColor.Yellow).Write();
+                ConsoleHelper.Center("Hello World", "=", System.ConsoleColor.Red).Write();
 
-            // use a blazor like logger
-            Logger.UseMBLogger();
+                ConsoleHelper.Run(() =>
+                {
+                    Logger.Info("Before sleep");
+                    Logger.Debug("Sleeping 1000ms");
+                    Thread.Sleep(1000);
+                    Logger.Info("After sleep");
+                }, "Test", true);
 
-            // use a square bracket logger
-            Logger.UseSBLogger();
+                // use a blazor like logger
+                Logger.UseMBLogger();
 
-            // the logs should be written to a file
-            Logger.LogToHtmlFile("log.html");
+                // use a square bracket logger
+                Logger.UseSBLogger();
 
-            // log a message as debug
-            Logger.Debug("A debug log message...\nwith 3\r\nlines");
+                // the logs should be written to a file
+                Logger.LogToHtmlFile("log.html");
 
-            Logger.DisableDebug = true; 
-            Logger.Debug("You cannot see this");
+                // log a message as debug
+                Logger.Debug("A debug log message...\nwith 3\r\nlines");
 
-            // log a message as info
-            Logger.Log("A log message...");
+                Logger.DisableDebug = true;
+                Logger.Debug("You cannot see this");
 
-            // Logger.Info(message) == Logger.Log(message)
-            Logger.Info("Another log message...");
+                // log a message as info
+                Logger.Log("A log message...");
 
-            // log a message as warning
-            Logger.Warn("A warning message...");
+                // Logger.Info(message) == Logger.Log(message)
+                Logger.Info("Another log message...");
 
-            // log a message as an error
-            Logger.Error("A error message..");
+                // log a message as warning
+                Logger.Warn("A warning message...");
 
-            await Task.Delay(2000);
+                // log a message as an error
+                Logger.Error("A error message..");
+
+                await Task.Delay(2000);
+            }
+            else
+            {
+                Application.Run(new Example.ExampleWindow());
+            }
         }
     }
 }
