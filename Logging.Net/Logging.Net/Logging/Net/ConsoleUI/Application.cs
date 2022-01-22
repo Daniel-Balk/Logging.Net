@@ -79,7 +79,7 @@ namespace Logging.Net.ConsoleUI
 
             Console.Write(px.PixelChar);
             
-            Console.CursorLeft--;
+            //Console.CursorLeft--;
         }
 
         private static void GoStart()
@@ -90,7 +90,7 @@ namespace Logging.Net.ConsoleUI
 
         private static void NX()
         {
-            Console.CursorLeft++;
+            //Console.CursorLeft++;
         }
 
         private static void NY()
