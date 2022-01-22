@@ -9,7 +9,7 @@ namespace Example
         public ExampleWindow()
         {
             Text = "Hello World";
-            Controls.Add(new TextBox());
+            Controls.Add(new TextBox() { X = 10, Y = 15});
         }
     }
 }
