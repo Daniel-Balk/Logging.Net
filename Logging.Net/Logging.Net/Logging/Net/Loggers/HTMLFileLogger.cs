@@ -33,28 +33,7 @@ namespace Logging.Net.Loggers
         public void ProcessMessage(string s, ConsoleColor color)
         {
             string html = $@"
-<div style=""
-color: {ProcessColor(color)};
-font-family: Arial;
-border-radius: 20px;
-background: rgb(224,224,224);
-background: -moz-linear-gradient(0deg, rgba(224,224,224,1) 0%, rgba(181,181,181,1) 100%);
-background: -webkit-linear-gradient(0deg, rgba(224,224,224,1) 0%, rgba(181,181,181,1) 100%);
-background: linear-gradient(0deg, rgba(224,224,224,1) 0%, rgba(181,181,181,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0e0e0',endColorstr='#b5b5b5',GradientType=1);
-border: 1px solid gray;
- "">
-    <div style=""
-    margin: 20px;
-    "">
-        <p style=""
-        font-size: 16pt;
-        overflow-wrap: break-word;
-        "">{s.Replace("\r\n","\n").Replace("\n","<br />")}</p>
-    </div>
-</div>
-<br />
-";
+<div style=""color: {ProcessColor(color)};font-family: Arial;border-radius: 20px;background: rgb(224,224,224);background: -moz-linear-gradient(0deg, rgba(224,224,224,1) 0%, rgba(181,181,181,1) 100%);background: -webkit-linear-gradient(0deg, rgba(224,224,224,1) 0%, rgba(181,181,181,1) 100%);background: linear-gradient(0deg, rgba(224,224,224,1) 0%, rgba(181,181,181,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0e0e0',endColorstr='#b5b5b5',GradientType=1);border: 1px solid gray;""><div style=""margin: 20px;""><p style=""font-size: 16pt;overflow-wrap: break-word;"">{s.Replace("<", "&lt;").Replace(">", "&gt;").Replace("\r\n","\n").Replace("\n","<br />")}</p></div></div><br />";
             var st = html.Replace("\r\n", "").Replace("\n", "");
             if (!File.Exists(FileName))
                 File.WriteAllText(FileName, "");
