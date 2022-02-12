@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Version>1.0.0</Version>
+	  <Authors>Dalk</Authors>
+	  <Description>Use Logging.Net with Spectre.Console</Description>
+	  <Copyright>Copyright (C) 2022 Dalk</Copyright>
+	  <PackageProjectUrl>https://github.com/Dalk-GitHub/Logging.Net/</PackageProjectUrl>
+	  <PackageIcon>icon.png</PackageIcon>
+	  <PackageReadmeFile>Readme.md</PackageReadmeFile>
+	  <RepositoryUrl>https://github.com/Dalk-GitHub/Logging.Net/</RepositoryUrl>
+	  <RepositoryType>git</RepositoryType>
+	  <PackageTags>Spectre.Console, Logging.Net</PackageTags>
+	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Logging.Net" Version="1.0.7" />
+    <PackageReference Include="Spectre.Console" Version="0.43.0" />
+  </ItemGroup>
+	
+	<ItemGroup>
+		<None Include="..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\Logging.Net\icon.png">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\Readme.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+</Project>

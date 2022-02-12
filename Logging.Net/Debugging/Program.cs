@@ -1,5 +1,6 @@
 ﻿using Logging.Net;
 using Logging.Net.ConsoleUI;
+using Logging.Net.Spectre;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -12,6 +13,7 @@ namespace Debugging
             bool win = false;
             if (!win)
             {
+                Logger.UsedLogger = new SpectreLogger();
                 // write a line of "="
                 ConsoleHelper.LineOfChar("=", System.ConsoleColor.Yellow).Write();
 

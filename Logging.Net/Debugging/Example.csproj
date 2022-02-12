@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Logging.Net.Spectre\Logging.Net.Spectre.csproj" />
     <ProjectReference Include="..\Logging.Net\Logging.Net.csproj" />
   </ItemGroup>
 
