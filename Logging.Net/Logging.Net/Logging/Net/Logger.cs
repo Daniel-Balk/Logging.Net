@@ -1,6 +1,8 @@
 ﻿using Logging.Net.Loggers;
 using Logging.Net.Loggers.MB;
 using Logging.Net.Loggers.SB;
+using System;
+using System.Reflection;
 
 namespace Logging.Net
 {
@@ -15,6 +17,15 @@ namespace Logging.Net
         public static ILogger UsedLogger { get; set; } = new SBLogger();
 
         #region Debug-Log Methods
+
+        /// <summary>
+        /// log an exception as debug
+        /// </summary>
+        /// <param name="e">exception to log</param>
+        public static void Debug(Exception e)
+        {
+            UsedLogger.DebugEx(e);
+        }
 
         /// <summary>
         /// logs an uint as debug
@@ -181,6 +192,15 @@ namespace Logging.Net
         #endregion
 
         #region Info-Log Methods
+
+        /// <summary>
+        /// log an exception as info
+        /// </summary>
+        /// <param name="e">exception to log</param>
+        public static void Info(Exception e)
+        {
+            UsedLogger.InfoEx(e);
+        }
 
         /// <summary>
         /// logs an uint as info
@@ -516,6 +536,15 @@ namespace Logging.Net
         #region Warn-Log Methods
 
         /// <summary>
+        /// log an exception as warn
+        /// </summary>
+        /// <param name="e">exception to log</param>
+        public static void Warn(Exception e)
+        {
+            UsedLogger.WarnEx(e);
+        }
+
+        /// <summary>
         /// logs an uint as warn
         /// </summary>
         /// <param name="value">value to log</param>
@@ -680,6 +709,15 @@ namespace Logging.Net
         #endregion
 
         #region Error-Log Methods
+
+        /// <summary>
+        /// log an exception as error
+        /// </summary>
+        /// <param name="e">exception to log</param>
+        public static void Error(Exception e)
+        {
+            UsedLogger.ErrorEx(e);
+        }
 
         /// <summary>
         /// logs an uint as error

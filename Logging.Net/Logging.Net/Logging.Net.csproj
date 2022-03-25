@@ -15,9 +15,9 @@
     <PackageTags>Logger</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl />
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.0.7</Version>
+    <AssemblyVersion>1.0.0.8</AssemblyVersion>
+    <FileVersion>1.0.0.8</FileVersion>
+    <Version>1.0.8</Version>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
 

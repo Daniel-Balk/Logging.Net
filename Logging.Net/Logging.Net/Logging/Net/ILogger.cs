@@ -27,6 +27,30 @@
         void Error(string s);
 
         /// <summary>
+        /// log an exception as info
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        void InfoEx(System.Exception ex);
+
+        /// <summary>
+        /// log an exception as debug
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        void DebugEx(System.Exception ex);
+
+        /// <summary>
+        /// log an exception as warn
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        void WarnEx(System.Exception ex);
+
+        /// <summary>
+        /// log an exception as error
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        void ErrorEx(System.Exception ex);
+
+        /// <summary>
         /// method to get the error configuration
         /// </summary>
         /// <returns>error configuration</returns>

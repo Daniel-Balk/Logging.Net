@@ -196,5 +196,50 @@ namespace Logging.Net.Loggers.MB
         {
             LogForConfiguration(WarnConfiguration, s);
         }
+
+        /// <summary>
+        /// log an exception as info
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        public void InfoEx(Exception ex)
+        {
+            LogExForConfiguration(InfoConfiguration, ex);
+        }
+
+        /// <summary>
+        /// log an exception as debug
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        public void DebugEx(Exception ex)
+        {
+            LogExForConfiguration(DebugConfiguration, ex);
+        }
+
+        /// <summary>
+        /// log an exception as warn
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        public void WarnEx(Exception ex)
+        {
+            LogExForConfiguration(WarnConfiguration, ex);
+        }
+
+        /// <summary>
+        /// log an exception as error
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        public void ErrorEx(Exception ex)
+        {
+            LogExForConfiguration(ErrorConfiguration, ex);
+        }
+
+        private void LogExForConfiguration(LoggingConfiguration conf, Exception ex)
+        {
+            var ln = ex.ToString().Replace("\r\n", "\n").Split('\n');
+            foreach (var l in ln)
+            {
+                LogForConfiguration(conf, l);
+            }
+        }
     }
 }
