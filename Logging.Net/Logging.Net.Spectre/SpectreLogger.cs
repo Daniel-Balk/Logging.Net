@@ -165,5 +165,45 @@ namespace Logging.Net.Spectre
         {
             LogForConfiguration(WarnConfiguration, s);
         }
+
+        /// <summary>
+        /// log an exception as info
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        public void InfoEx(Exception ex)
+        {
+            Info($"{ex.GetType().Name}: {ex.Message}");
+            AnsiConsole.WriteException(ex, ExceptionFormats.ShowLinks);
+        }
+
+        /// <summary>
+        /// log an exception as debug
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        public void DebugEx(Exception ex)
+        {
+            Debug($"{ex.GetType().Name}: {ex.Message}");
+            AnsiConsole.WriteException(ex, ExceptionFormats.ShowLinks);
+        }
+
+        /// <summary>
+        /// log an exception as warn
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        public void WarnEx(Exception ex)
+        {
+            Warn($"{ex.GetType().Name}: {ex.Message}");
+            AnsiConsole.WriteException(ex, ExceptionFormats.ShowLinks);
+        }
+
+        /// <summary>
+        /// log an exception as error
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        public void ErrorEx(Exception ex)
+        {
+            Error($"{ex.GetType().Name}: {ex.Message}");
+            AnsiConsole.WriteException(ex, ExceptionFormats.ShowLinks);
+        }
     }
 }

@@ -3,7 +3,7 @@
   <PropertyGroup>
 	  <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	  <Version>1.0.0</Version>
+	  <Version>1.0.1</Version>
 	  <Authors>Dalk</Authors>
 	  <Description>Use Logging.Net with Spectre.Console</Description>
 	  <Copyright>Copyright (C) 2022 Dalk</Copyright>
@@ -18,7 +18,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Logging.Net" Version="1.0.7" />
+    <PackageReference Include="Logging.Net" Version="1.0.8" />
     <PackageReference Include="Spectre.Console" Version="0.43.0" />
   </ItemGroup>
 	

@@ -193,6 +193,8 @@ namespace Logging.Net
 
         #region Info-Log Methods
 
+        #region Info
+
         /// <summary>
         /// log an exception as info
         /// </summary>
@@ -365,7 +367,21 @@ namespace Logging.Net
             Info(value.ToString());
         }
 
+        #endregion
+
         // Could also be accessed with Log()
+
+        #region Log
+
+        /// <summary>
+        /// log an exception as info
+        /// </summary>
+        /// <param name="e">exception to log</param>
+        public static void Log(Exception e)
+        {
+            UsedLogger.InfoEx(e);
+        }
+
 
         /// <summary>
         /// logs an uint as info
@@ -530,6 +546,7 @@ namespace Logging.Net
         {
             Log(value.ToString());
         }
+        #endregion
 
         #endregion
 

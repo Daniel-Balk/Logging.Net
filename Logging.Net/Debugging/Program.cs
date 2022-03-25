@@ -20,6 +20,9 @@ namespace Debugging
                 // write "Hello World" centered between a lot of "="
                 ConsoleHelper.Center("Hello World", "=", System.ConsoleColor.Red).Write();
 
+                Logger.Info((System.Exception)new System.NotImplementedException());
+
+
                 ConsoleHelper.Run(() =>
                 {
                     Logger.Info("Before sleep");
