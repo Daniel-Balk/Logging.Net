@@ -9,6 +9,8 @@ namespace Logging.Net.Loggers
     /// </summary>
     public class LogFileLogger : ILoggingAddition
     {
+        object _lock = new object();
+
         /// <summary>
         /// name of the file the class uses
         /// </summary>
@@ -30,11 +32,14 @@ namespace Logging.Net.Loggers
         /// <param name="color">color of the message</param>
         public void ProcessMessage(string s, ConsoleColor color)
         {
-            if (!File.Exists(FileName))
-                File.WriteAllText(FileName, "");
-            var content = File.ReadAllLines(FileName).ToList();
-            content.Add(s);
-            File.WriteAllLines(FileName, content);
+            lock (_lock)
+            {
+                if (!File.Exists(FileName))
+                    File.WriteAllText(FileName, "");
+                var content = File.ReadAllLines(FileName).ToList();
+                content.Add(s);
+                File.WriteAllLines(FileName, content);
+            }
         }
     }
 }
