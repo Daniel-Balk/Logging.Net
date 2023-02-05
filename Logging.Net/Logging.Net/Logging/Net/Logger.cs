@@ -43,7 +43,15 @@ namespace Logging.Net
         /// <param name="arg">replacing parameters</param>
         public static void Debug(string format, params object[] arg)
         {
-            Debug(string.Format(format, arg));
+            string s = format;
+            int i = 0;
+            foreach (var v in arg)
+            {
+                if (!s.Contains($"{{{i}}}"))
+                    s += $" {{{i}}}";
+                i++;
+            }
+            Debug(string.Format(s, arg));
         }
 
         /// <summary>
@@ -140,39 +148,6 @@ namespace Logging.Net
         }
 
         /// <summary>
-        /// logs a formated string as debug
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">replacing string</param>
-        public static void Debug(string format, object arg0)
-        {
-            Debug(string.Format(format, arg0));
-        }
-
-        /// <summary>
-        /// logs a formated string as debug
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">first replacing string</param>
-        /// <param name="arg1">second replacing string</param>
-        public static void Debug(string format, object arg0, object arg1)
-        {
-            Debug(string.Format(format, arg0, arg1));
-        }
-
-        /// <summary>
-        /// logs a formated string as debug
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">first replacing string</param>
-        /// <param name="arg1">second replacing string</param>
-        /// <param name="arg2">third repacing string</param>
-        public static void Debug(string format, object arg0, object arg1, object arg2)
-        {
-            Debug(string.Format(format, arg0, arg1, arg2));
-        }
-
-        /// <summary>
         /// logs a long as debug
         /// </summary>
         /// <param name="value">value to log</param>
@@ -192,7 +167,6 @@ namespace Logging.Net
         #endregion
 
         #region Info-Log Methods
-
         #region Info
 
         /// <summary>
@@ -220,7 +194,15 @@ namespace Logging.Net
         /// <param name="arg">replacing strings</param>
         public static void Info(string format, params object[] arg)
         {
-            Info(string.Format(format, arg));
+            string s = format;
+            int i = 0;
+            foreach (var v in arg)
+            {
+                if (!s.Contains($"{{{i}}}"))
+                    s += $" {{{i}}}";
+                i++;
+            }
+            Info(string.Format(s, arg));
         }
 
         /// <summary>
@@ -317,39 +299,6 @@ namespace Logging.Net
         }
 
         /// <summary>
-        /// logs a formated string
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">replacing string</param>
-        public static void Info(string format, object arg0)
-        {
-            Info(string.Format(format, arg0));
-        }
-
-        /// <summary>
-        /// logs a formated string
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">first replacing string</param>
-        /// <param name="arg1">second replacing string</param>
-        public static void Info(string format, object arg0, object arg1)
-        {
-            Info(string.Format(format, arg0, arg1));
-        }
-
-        /// <summary>
-        /// logs a formated string
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">first replacing string</param>
-        /// <param name="arg1">second replacing string</param>
-        /// <param name="arg2">thirs replacing string</param>
-        public static void Info(string format, object arg0, object arg1, object arg2)
-        {
-            Info(string.Format(format, arg0, arg1, arg2));
-        }
-
-        /// <summary>
         /// logs a long as info
         /// </summary>
         /// <param name="value">value to log</param>
@@ -399,7 +348,15 @@ namespace Logging.Net
         /// <param name="arg">replacing strings</param>
         public static void Log(string format, params object[] arg)
         {
-            Log(string.Format(format, arg));
+            string s = format;
+            int i = 0;
+            foreach (var v in arg)
+            {
+                if (!s.Contains($"{{{i}}}"))
+                    s += $" {{{i}}}";
+                i++;
+            }
+            Log(string.Format(s, arg));
         }
 
         /// <summary>
@@ -496,40 +453,6 @@ namespace Logging.Net
         }
 
         /// <summary>
-        /// logs a formated string
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">replacing string</param>
-        public static void Log(string format, object arg0)
-        {
-            Log(string.Format(format, arg0));
-        }
-
-        /// <summary>
-        /// logs a formated string
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">first replacing string</param>
-        /// <param name="arg1">second replacing string</param>
-        public static void Log(string format, object arg0, object arg1)
-        {
-            Log(string.Format(format, arg0, arg1));
-        }
-
-        /// <summary>
-        /// logs a formated string
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">first replacing string</param>
-        /// <param name="arg1">second replacing string</param>
-        /// <param name="arg2">thirs replacing string</param>
-        public static void Log(string format, object arg0, object arg1, object arg2)
-        {
-            Log(string.Format(format, arg0, arg1, arg2));
-        }
-
-
-        /// <summary>
         /// logs a long as info
         /// </summary>
         /// <param name="value">value to log</param>
@@ -547,7 +470,6 @@ namespace Logging.Net
             Log(value.ToString());
         }
         #endregion
-
         #endregion
 
         #region Warn-Log Methods
@@ -577,7 +499,15 @@ namespace Logging.Net
         /// <param name="arg">replacing parameters</param>
         public static void Warn(string format, params object[] arg)
         {
-            Warn(string.Format(format, arg));
+            string s = format;
+            int i = 0;
+            foreach (var v in arg)
+            {
+                if (!s.Contains($"{{{i}}}"))
+                    s += $" {{{i}}}";
+                i++;
+            }
+            Warn(string.Format(s, arg));
         }
 
         /// <summary>
@@ -674,39 +604,6 @@ namespace Logging.Net
         }
 
         /// <summary>
-        /// logs a formated string as warn
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">replacing string</param>
-        public static void Warn(string format, object arg0)
-        {
-            Warn(string.Format(format, arg0));
-        }
-
-        /// <summary>
-        /// logs a formated string as warn
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">first replacing string</param>
-        /// <param name="arg1">second replacing string</param>
-        public static void Warn(string format, object arg0, object arg1)
-        {
-            Warn(string.Format(format, arg0, arg1));
-        }
-
-        /// <summary>
-        /// logs a formated string as warn
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">first replacing string</param>
-        /// <param name="arg1">second replacing string</param>
-        /// <param name="arg2">third repacing string</param>
-        public static void Warn(string format, object arg0, object arg1, object arg2)
-        {
-            Warn(string.Format(format, arg0, arg1, arg2));
-        }
-
-        /// <summary>
         /// logs a long as warn
         /// </summary>
         /// <param name="value">value to log</param>
@@ -752,7 +649,15 @@ namespace Logging.Net
         /// <param name="arg">replacing parameters</param>
         public static void Error(string format, params object[] arg)
         {
-            Error(string.Format(format, arg));
+            string s = format;
+            int i = 0;
+            foreach (var v in arg)
+            {
+                if (!s.Contains($"{{{i}}}"))
+                    s += $" {{{i}}}";
+                i++;
+            }
+            Error(string.Format(s, arg));
         }
 
         /// <summary>
@@ -849,39 +754,6 @@ namespace Logging.Net
         }
 
         /// <summary>
-        /// logs a formated string as error
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">replacing string</param>
-        public static void Error(string format, object arg0)
-        {
-            Error(string.Format(format, arg0));
-        }
-
-        /// <summary>
-        /// logs a formated string as error
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">first replacing string</param>
-        /// <param name="arg1">second replacing string</param>
-        public static void Error(string format, object arg0, object arg1)
-        {
-            Error(string.Format(format, arg0, arg1));
-        }
-
-        /// <summary>
-        /// logs a formated string as error
-        /// </summary>
-        /// <param name="format">base string</param>
-        /// <param name="arg0">first replacing string</param>
-        /// <param name="arg1">second replacing string</param>
-        /// <param name="arg2">third repacing string</param>
-        public static void Error(string format, object arg0, object arg1, object arg2)
-        {
-            Error(string.Format(format, arg0, arg1, arg2));
-        }
-
-        /// <summary>
         /// logs a long as error
         /// </summary>
         /// <param name="value">value to log</param>
@@ -897,6 +769,156 @@ namespace Logging.Net
         public static void Error(char value)
         {
             Error(value.ToString());
+        }
+        #endregion
+
+        #region Fatal-Log Methods
+
+        /// <summary>
+        /// log an exception as fatal
+        /// </summary>
+        /// <param name="e">exception to log</param>
+        public static void Fatal(Exception e)
+        {
+            UsedLogger.FatalEx(e);
+        }
+
+        /// <summary>
+        /// logs an uint as fatal
+        /// </summary>
+        /// <param name="value">value to log</param>
+        public static void Fatal(uint value)
+        {
+            Fatal(value.ToString());
+        }
+
+        /// <summary>
+        /// logs a formated string as fatal
+        /// </summary>
+        /// <param name="format">base string</param>
+        /// <param name="arg">replacing parameters</param>
+        public static void Fatal(string format, params object[] arg)
+        {
+            string s = format;
+            int i = 0;
+            foreach (var v in arg)
+            {
+                if (!s.Contains($"{{{i}}}"))
+                    s += $" {{{i}}}";
+                i++;
+            }
+            Fatal(string.Format(s, arg));
+        }
+
+        /// <summary>
+        /// logs a bool as fatal
+        /// </summary>
+        /// <param name="value">value to log</param>
+        public static void Fatal(bool value)
+        {
+            Fatal(value.ToString());
+        }
+
+        /// <summary>
+        /// logs a char[] as fatal
+        /// </summary>
+        /// <param name="buffer">value to log</param>
+        public static void Fatal(char[] buffer)
+        {
+            Fatal(new string(buffer));
+        }
+
+        /// <summary>
+        /// logs a part of a char[] as fatal
+        /// </summary>
+        /// <param name="buffer">value to log</param>
+        /// <param name="index">start at</param>
+        /// <param name="count">count of chars to log</param>
+        public static void Fatal(char[] buffer, int index, int count)
+        {
+            Fatal(new string(buffer, index, count));
+        }
+
+        /// <summary>
+        /// logs a decimal as fatal
+        /// </summary>
+        /// <param name="value">value to log</param>
+        public static void Fatal(decimal value)
+        {
+            Fatal(value.ToString());
+        }
+
+        /// <summary>
+        /// logs a double as fatal
+        /// </summary>
+        /// <param name="value">value to log</param>
+        public static void Fatal(double value)
+        {
+            Fatal(value.ToString());
+        }
+
+        /// <summary>
+        /// logs an ulong as fatal
+        /// </summary>
+        /// <param name="value">value to log</param>
+        public static void Fatal(ulong value)
+        {
+            Fatal(value.ToString());
+        }
+
+        /// <summary>
+        /// logs an int as fatal
+        /// </summary>
+        /// <param name="value">value to log</param>
+        public static void Fatal(int value)
+        {
+            Fatal(value.ToString());
+        }
+
+        /// <summary>
+        /// logs an object as fatal
+        /// </summary>
+        /// <param name="value">value to log</param>
+        public static void Fatal(object value)
+        {
+            Fatal(value.ToString());
+        }
+
+        /// <summary>
+        /// logs a float as fatal
+        /// </summary>
+        /// <param name="value">value to log</param>
+        public static void Fatal(float value)
+        {
+            Fatal(value.ToString());
+        }
+
+        /// <summary>
+        /// logs a string as fatal
+        /// </summary>
+        /// <param name="value">value to log</param>
+        public static void Fatal(string value)
+        {
+            if (!DisableFatal)
+                UsedLogger.Fatal(value);
+        }
+
+        /// <summary>
+        /// logs a long as fatal
+        /// </summary>
+        /// <param name="value">value to log</param>
+        public static void Fatal(long value)
+        {
+            Fatal(value.ToString());
+        }
+
+        /// <summary>
+        /// logs a char as fatal
+        /// </summary>
+        /// <param name="value">value to log</param>
+        public static void Fatal(char value)
+        {
+            Fatal(value.ToString());
         }
         #endregion
 
@@ -959,6 +981,11 @@ namespace Logging.Net
         /// by setting this to true, the logger wont log error anymore
         /// </summary>
         public static bool DisableError { get; set; } = false;
+
+        /// <summary>
+        /// by setting this to true, the logger wont log fatal anymore
+        /// </summary>
+        public static bool DisableFatal { get; set; } = false;
 
         #endregion
     }

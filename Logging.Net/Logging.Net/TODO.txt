@@ -1,0 +1,5 @@
+﻿- [x] Fatal LogLevel
+- [x] Log(string format, params object[] arg) without {i} in string
+- [ ] LoggingAliasAttribute for classes
+- [x] Config for logging the class
+- [ ] Logging Additions v2

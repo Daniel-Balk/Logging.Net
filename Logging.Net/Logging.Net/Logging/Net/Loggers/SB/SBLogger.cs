@@ -7,6 +7,7 @@ namespace Logging.Net.Loggers.SB
     /// </summary>
     public class SBLogger : ILogger
     {
+        #region Configurations
         /// <summary>
         /// configuration for debug logs
         /// </summary>
@@ -23,19 +24,37 @@ namespace Logging.Net.Loggers.SB
         /// configuration for error logs
         /// </summary>
         public LoggingConfiguration ErrorConfiguration { get; set; } = new SBErrorConfiguration();
+        /// <summary>
+        /// configuration for fatak logs
+        /// </summary>
+        public LoggingConfiguration FatalConfiguration { get; set; } = new SBFatalConfiguration();
+        #endregion
 
+        #region Properties
         /// <summary>
         /// additional logging operation
         /// </summary>
         public ILoggingAddition Addition { get; set; } = new NoAddition();
 
-        private void LogForConfiguration(LoggingConfiguration c, string s)
-        {
-            var m = c.GetPrefix(c.GetTimePrefix()) + s;
-            LoggingHelper.ForegroundColorWriteLine(m, c.Color);
-            Addition.ProcessMessage(m, c.Color);
-        }
+        /// <summary>
+        /// if true: logs the name of the calling class
+        /// </summary>
+        public bool LogCallingClass { get; set; } = true;
+        #endregion
 
+        private void LogForConfiguration(LoggingConfiguration c, string str)
+        {
+            var lns = str.Replace("\r\n", "\n").Split('\n');
+            foreach (var s in lns)
+            {
+                var m = c.GetPrefix(c.GetTimePrefix());
+                LoggingHelper.ForegroundColorWrite(m, c.Color);
+                if (LogCallingClass)
+                    LoggingHelper.ForegroundColorWrite("(" + LoggingHelper.NameOfCallingClass() + ") ", ConsoleColor.Blue);
+                LoggingHelper.ForegroundColorWriteLine(s, ConsoleColor.White);
+                Addition.ProcessMessage(m, c.Color);
+            }
+        }
 
         /// <summary>
         /// logs a string as debug
@@ -55,7 +74,16 @@ namespace Logging.Net.Loggers.SB
             LogForConfiguration(ErrorConfiguration, s);
         }
 
+        /// <summary>
+        /// logs a string as fatal
+        /// </summary>
+        /// <param name="s">string to log</param>
+        public void Fatal(string s)
+        {
+            LogForConfiguration(FatalConfiguration, s);
+        }
 
+        #region Get Methods
         /// <summary>
         /// gets addition
         /// </summary>
@@ -84,6 +112,15 @@ namespace Logging.Net.Loggers.SB
         }
 
         /// <summary>
+        /// gets fatal configuration
+        /// </summary>
+        /// <returns>fatal configuration</returns>
+        public LoggingConfiguration GetFatalConfiguration()
+        {
+            return FatalConfiguration;
+        }
+
+        /// <summary>
         /// gets info configuration
         /// </summary>
         /// <returns>info configuration</returns>
@@ -100,6 +137,7 @@ namespace Logging.Net.Loggers.SB
         {
             return WarnConfiguration;
         }
+        #endregion
 
         /// <summary>
         /// logs a string as info
@@ -110,7 +148,7 @@ namespace Logging.Net.Loggers.SB
             LogForConfiguration(InfoConfiguration, s);
         }
 
-
+        #region Set Methods
         /// <summary>
         /// sets addition
         /// </summary>
@@ -139,6 +177,15 @@ namespace Logging.Net.Loggers.SB
         }
 
         /// <summary>
+        /// sets new fatal configuration
+        /// </summary>
+        /// <param name="configuration">new value</param>
+        public void SetFatalConfiguration(LoggingConfiguration configuration)
+        {
+            FatalConfiguration = configuration;
+        }
+
+        /// <summary>
         /// sets new info configuration
         /// </summary>
         /// <param name="configuration">new value</param>
@@ -155,6 +202,7 @@ namespace Logging.Net.Loggers.SB
         {
             WarnConfiguration = configuration;
         }
+        #endregion
 
         /// <summary>
         /// logs a string as warn
@@ -201,13 +249,18 @@ namespace Logging.Net.Loggers.SB
             LogExForConfiguration(ErrorConfiguration, ex);
         }
 
+        /// <summary>
+        /// log an exception as fatal
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        public void FatalEx(Exception ex)
+        {
+            LogExForConfiguration(FatalConfiguration, ex);
+        }
+
         private void LogExForConfiguration(LoggingConfiguration conf, Exception ex)
         {
-            var ln = ex.ToString().Replace("\r\n", "\n").Split('\n');
-            foreach (var l in ln)
-            {
-                LogForConfiguration(conf, l);
-            }
+            LogForConfiguration(conf, ex.ToString());
         }
     }
 }

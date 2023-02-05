@@ -13,7 +13,7 @@ namespace Debugging
             bool win = false;
             if (!win)
             {
-                Logger.UsedLogger = new SpectreLogger();
+                //Logger.UsedLogger = new SpectreLogger();
                 // write a line of "="
                 ConsoleHelper.LineOfChar("=", System.ConsoleColor.Yellow).Write();
 
@@ -60,6 +60,9 @@ namespace Debugging
 
                 // log a message as an error
                 Logger.Error("A error message..");
+
+                // log a message as an error
+                Logger.Fatal("A fatal message..");
 
                 // disable info logging
                 Logger.DisableInfo = true;

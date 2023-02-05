@@ -1,0 +1,32 @@
+﻿using System;
+
+namespace Logging.Net.Loggers.SB
+{
+    /// <summary>
+    /// color configuration for error
+    /// </summary>
+    public class SBFatalConfiguration : LoggingConfiguration
+    {
+        /// <summary>
+        /// constructor with default values
+        /// </summary>
+        public SBFatalConfiguration() : base(ConsoleColor.DarkRed, new PrefixAction<string>((time) =>
+        {
+            return "[FATAL] " + time + " ";
+        }),
+        new PrefixAction(() =>
+        {
+            return "[" + FormatInteger(DateTime.Now.Hour) + ":" + FormatInteger(DateTime.Now.Minute)
+              + ":" + FormatInteger(DateTime.Now.Second) + "]";
+        }))
+        {
+
+        }
+        private static string FormatInteger(int i)
+        {
+            if (i.ToString().Length > 1)
+                return i.ToString();
+            return "0" + i.ToString();
+        }
+    }
+}

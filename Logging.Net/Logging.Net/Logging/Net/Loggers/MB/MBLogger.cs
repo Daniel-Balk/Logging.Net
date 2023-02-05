@@ -10,6 +10,7 @@ namespace Logging.Net.Loggers.MB
     /// </summary>
     public class MBLogger : ILogger
     {
+        #region Configurations
         /// <summary>
         /// configuration for debug logs
         /// </summary>
@@ -26,18 +27,33 @@ namespace Logging.Net.Loggers.MB
         /// configuration for error logs
         /// </summary>
         public LoggingConfiguration ErrorConfiguration { get; set; } = new MBErrorConfiguration();
+        /// <summary>
+        /// configuration for fatak logs
+        /// </summary>
+        public LoggingConfiguration FatalConfiguration { get; set; } = new MBFatalConfiguration();
+        #endregion
 
+        #region Properties
         /// <summary>
         /// additional logging operation
         /// </summary>
         public ILoggingAddition Addition { get; set; } = new NoAddition();
 
+        /// <summary>
+        /// if true: logs the name of the calling class
+        /// </summary>
+        public bool LogCallingClass { get; set; } = true;
+        #endregion
+
         private void LogForConfiguration(LoggingConfiguration c, string s)
         {
             string logged = "";
             var prefix = c.GetPrefix(c.GetTimePrefix());
-            logged += prefix;
+            var cl = LogCallingClass ? (" (" + LoggingHelper.NameOfCallingClass() + ")") : "";
             LoggingHelper.ForegroundColorWrite(prefix, c.Color);
+            LoggingHelper.ForegroundColorWrite(cl, ConsoleColor.Blue);
+            prefix += cl;
+            logged += prefix;
             Console.Write(": ");
             var lines = s.Replace("\r\n", "\n").Split('\n');
             int i = 0;
@@ -68,7 +84,6 @@ namespace Logging.Net.Loggers.MB
             Addition.ProcessMessage(logged, c.Color);
         }
 
-
         /// <summary>
         /// logs a string as debug
         /// </summary>
@@ -87,7 +102,16 @@ namespace Logging.Net.Loggers.MB
             LogForConfiguration(ErrorConfiguration, s);
         }
 
+        /// <summary>
+        /// logs a string as fatal
+        /// </summary>
+        /// <param name="s">string to log</param>
+        public void Fatal(string s)
+        {
+            LogForConfiguration(FatalConfiguration, s);
+        }
 
+        #region Get Methods
         /// <summary>
         /// gets addition
         /// </summary>
@@ -116,6 +140,15 @@ namespace Logging.Net.Loggers.MB
         }
 
         /// <summary>
+        /// gets fatal configuration
+        /// </summary>
+        /// <returns>fatal configuration</returns>
+        public LoggingConfiguration GetFatalConfiguration()
+        {
+            return FatalConfiguration;
+        }
+
+        /// <summary>
         /// gets info configuration
         /// </summary>
         /// <returns>info configuration</returns>
@@ -132,6 +165,7 @@ namespace Logging.Net.Loggers.MB
         {
             return WarnConfiguration;
         }
+        #endregion
 
         /// <summary>
         /// logs a string as info
@@ -142,7 +176,7 @@ namespace Logging.Net.Loggers.MB
             LogForConfiguration(InfoConfiguration, s);
         }
 
-
+        #region Set Methods
         /// <summary>
         /// sets addition
         /// </summary>
@@ -171,6 +205,15 @@ namespace Logging.Net.Loggers.MB
         }
 
         /// <summary>
+        /// sets new fatal configuration
+        /// </summary>
+        /// <param name="configuration">new value</param>
+        public void SetFatalConfiguration(LoggingConfiguration configuration)
+        {
+            FatalConfiguration = configuration;
+        }
+
+        /// <summary>
         /// sets new info configuration
         /// </summary>
         /// <param name="configuration">new value</param>
@@ -187,6 +230,7 @@ namespace Logging.Net.Loggers.MB
         {
             WarnConfiguration = configuration;
         }
+        #endregion
 
         /// <summary>
         /// logs a string as warn
@@ -233,13 +277,18 @@ namespace Logging.Net.Loggers.MB
             LogExForConfiguration(ErrorConfiguration, ex);
         }
 
+        /// <summary>
+        /// log an exception as fatal
+        /// </summary>
+        /// <param name="ex">exception to log</param>
+        public void FatalEx(Exception ex)
+        {
+            LogExForConfiguration(FatalConfiguration, ex);
+        }
+
         private void LogExForConfiguration(LoggingConfiguration conf, Exception ex)
         {
-            var ln = ex.ToString().Replace("\r\n", "\n").Split('\n');
-            foreach (var l in ln)
-            {
-                LogForConfiguration(conf, l);
-            }
+            LogForConfiguration(conf, ex.ToString());
         }
     }
 }
