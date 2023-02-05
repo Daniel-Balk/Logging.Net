@@ -4,20 +4,20 @@
     <TargetFrameworks>net5.0;net6.0;netcoreapp3.1;net45;net451;net452;net46;net461;net462;net47;net471;net472;net48;net40</TargetFrameworks>
     <RootNamespace />
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/Dalk-GitHub/Logging.Net</PackageProjectUrl>
-    <Company>Dalk</Company>
+    <PackageProjectUrl>https://github.com/Daniel-Balk/Logging.Net</PackageProjectUrl>
+    <Company></Company>
     <Authors>DalkYouTube</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>A logging library for C#</Description>
     <Copyright />
-    <RepositoryUrl>https://github.com/Dalk-GitHub/Logging.Net</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Daniel-Balk/Logging.Net</RepositoryUrl>
     <PackageTags>Logger</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl />
-    <AssemblyVersion>1.0.0.9</AssemblyVersion>
-    <FileVersion>1.0.0.9</FileVersion>
-    <Version>1.0.9</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.0</Version>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
 
